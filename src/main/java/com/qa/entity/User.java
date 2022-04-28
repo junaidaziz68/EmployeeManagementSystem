@@ -63,7 +63,7 @@ public class User {
 		this.email = email;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "department_id", referencedColumnName = "id")
 	@JsonIgnore
 	private Department mdepartment;
