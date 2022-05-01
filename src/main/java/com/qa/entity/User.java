@@ -20,9 +20,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@Column(name = "first_name")
+	@Column(name = "firstName")
 	private String firstName;
-	@Column(name = "last_name")
+	@Column(name = "lastName")
 	private String lastName;
 	@NotBlank
 	@Column(name = "email")
@@ -63,7 +63,7 @@ public class User {
 		this.email = email;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "department_id", referencedColumnName = "id")
 	@JsonIgnore
 	private Department mdepartment;

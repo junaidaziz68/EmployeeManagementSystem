@@ -31,7 +31,7 @@ public class Department {
 	@NotBlank
 	private String name;
 
-	@OneToMany(mappedBy = "mdepartment", targetEntity = User.class, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "mdepartment", targetEntity = User.class, fetch = FetchType.EAGER)
 	@JsonIgnore
 	private List<User> user;
 
