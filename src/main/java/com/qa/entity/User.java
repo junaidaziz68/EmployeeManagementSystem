@@ -20,9 +20,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@Column(name = "first_name")
+	@Column(name = "firstName")
 	private String firstName;
-	@Column(name = "last_name")
+	@Column(name = "lastName")
 	private String lastName;
 	@NotBlank
 	@Column(name = "email")
